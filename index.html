@@ -1,46 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Astral Runner</title>
-    <link rel="stylesheet" href="./estilo/estil.css">
-    <script src="../js/cookies.js"></script>
+    <title>Mi Portafolio con Bootstrap</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </head>
-
 <body>
-    <div class="magistral">
-        <div id="izquierda"></div>
-        <div id="derecha"></div>
-        <div id="inicio">
-            <button id="botonsito" onclick="startgame()">START</button>
-            <a href="../index.php"><button id="botonsito2">EXIT</button></a>
-            <p>Para saltar presione la barra espaciadora</p>
-        </div> 
-        <div id="joc">
-            <div id="score" value="0">SCORE: </div>
-            <div id="player">
-                <img id="playerrun" src="" height="70" width="50">
-            </div>
-            <div id="obstacle">
-                <img src="./media/barrel.png" height="50" width="35">
-            </div>
-            <div id="obstacle2">
-                <img src="./media/oilspill.png" height="30" width="100">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-dark" href="#presentacion" style="margin-right: 100px;">Presentación</a> <!-- Agrega margen a la derecha -->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-dark" href="#habilidades" style="margin-right: 100px;">Habilidades</a> <!-- Agrega margen a la derecha -->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-dark" href="#proyectos">Proyectos</a>
+                    </li>
+                </ul>
             </div>
         </div>
-        <div id="mapa">
-            <img src="./media/background.png" height="300" width="750">
+    </nav>
+    
+    <section id="presentacion" class="container-fluid bg-dark py-5"> <!-- Cambia la clase bg-light a bg-dark -->
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-center">
+                <h1>Bienvenido a Mi Portafolio</h1>
+                <img src="./assets/alex.jpg" alt="Foto de Presentación" class="img-fluid img-presentacion rounded-circle my-4">
+                <p>Me llamo Alex, tengo 24 años y soy estudiante de Desarrollo de Aplicaciones Web.</p>
+            </div>
         </div>
-        <div id="final">
-            <button id="botonsito3" onclick="playagain()">PLAY AGAIN</button>
-            <button id="botonsito4" onclick="exit()">EXIT</button>
-            <div id="finalScore" value="0">FINAL SCORE: </div>
+    </section>
+    
+    <section id="habilidades" class="container py-5">
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="mb-4">Lenguajes de Programación</h2>
+                <div class="progress mb-3">
+                    <div class="progress-bar bg-primary" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">PHP</div>
+                </div>
+                <div class="progress mb-3">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">HTML</div>
+                </div>
+                <div class="progress mb-3">
+                    <div class="progress-bar bg-warning" role="progressbar" style="width: 65%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">JS</div>
+                </div>
+                <div class="progress mb-3">
+                    <div class="progress-bar bg-danger" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">MySql</div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h2 class="mb-4">Habilidades Blandas</h2>
+                <div class="progress mb-3">
+                    <div class="progress-bar bg-primary" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">Trabajo en equipo</div>
+                </div>
+                <div class="progress mb-3">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Puntualidad</div>
+                </div>
+                <div class="progress mb-3">
+                    <div class="progress-bar bg-warning" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">Adaptabilidad</div>
+                </div>
+                <div class="progress mb-3">
+                    <div class="progress-bar bg-danger" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">Aprendizaje activo</div>
+                </div>
+            </div>
         </div>
-    </div>
-</body>
-<script src="./sinfin.js"></script>
+    </section>
+    
+    <section id="proyectos" class="container py-5">
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <div class="card" style="width: 28rem;">
+                    <img src="./assets/astralruner.png" class="card-img-top" alt="">
+                    <div class="card-body">
+                      <h5 class="card-title">Astral Runner</h5>
+                      <p class="card-text">Este fue mi primer proyecto completo de javaScript. Consiste en un juego del tipo Endless Runner, en el que juegas como Astral, un extraterrestre que debe escapar de la contaminación del planeta Tierra.</p>
+                      <a href="https://github.com/aalbala17/firstProject" class="btn btn-primary">GitHub</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card" style="width: 28rem;">
+                    <img src="./assets/112.png" class="card-img-top" alt="">
+                    <div class="card-body">
+                      <h5 class="card-title">Broggi 112</h5>
+                      <p class="card-text">Un gran proyecto en equipo, que consistia en crear una aplicación similar a la de gestión de llamadas del 112 para recoger información de una emergencia y agilizar los procesos.</p>
+                      <a href="https://github.com/aalbala17/broggi112" class="btn btn-primary">GitHub</a>
+                    </div>
+                  </div>
+        </div>
+        <div class="row mb-4" style="margin-top: 200px;">
+            <div class="col-md-6">
+                <div class="card" style="width: 28rem;">
+                    <img src="./assets/aeroport.jpg" class="card-img-top" alt="">
+                    <div class="card-body">
+                      <h5 class="card-title">Camino al aeropuerto</h5>
+                      <p class="card-text">Se trata de un juego similar al de la oca, pero combinado con un trivial. Tu desempeñas el papel de Laia, una chica que tiene que coger un vuelo, y para ello deberas llegar al aeropuerto antes que el piloto.</p>
+                      <a href="https://github.com/aalbala17/roadToAir" class="btn btn-primary">GitHub</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card" style="width: 28rem;">
+                    <img src="./assets/sharebites.png" class="card-img-top" alt="">
+                    <div class="card-body">
+                      <h5 class="card-title">Sharebites</h5>
+                      <p class="card-text">Otro proyecto en grupo, que es una aplicación para poder aprovechar comida y ayudar a gente que lo necesite. En este proyecto yo me encargue de la parte de administración utilizando laravel y vue.</p>
+                      <a href="https://github.com/aalbala17/sharebites" class="btn btn-primary">GitHub</a>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </section>
 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
 </html>
